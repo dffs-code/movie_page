@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@500;700&family=Jost&family=PT+Sans&display=swap');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css');
+
 *{
     color: whitesmoke;
 }
@@ -12,4 +15,15 @@
 
 .movie-info{
     margin: 10px;
+}
+
+.movie-info h1{
+    font-family: 'Comfortaa', cursive;
+}
+.movie-info h3, p{
+    font-family: 'Jost', sans-serif;
+}
+
+.checked{
+    color: orange;
 }
