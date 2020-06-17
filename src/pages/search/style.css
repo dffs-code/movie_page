@@ -1,0 +1,13 @@
+.searchbar{
+    color: whitesmoke;
+    font-size: 20px;
+    width: 250px;
+    background: transparent;
+    border: transparent;
+    transition: 0.2s all;
+}
+
+.searchbar:focus{
+    outline: none;
+    border-bottom: 2px solid #01b4e4;
+}

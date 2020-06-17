@@ -8,3 +8,13 @@ nav{
     margin-left: 15px;
     width: 100px;
 }
+i{
+    margin-top: 22px;
+    margin-right: 20px;
+    float: right;
+    transition: 0.2s all;
+}
+i:hover{
+    font-weight: bold;
+    color: #01b4e4;
+}
