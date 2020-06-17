@@ -1,0 +1,41 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+a{
+    text-decoration: none;
+}
+
+
+.trending{
+    justify-content: center;
+    float: left;
+    margin: 10px 10px;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 5px;
+}
+.trending article{
+    color: whitesmoke;
+    text-align: center;
+    background: transparent;
+    margin: 5px;
+    margin-bottom: 20px;
+    width: 185px;
+    font-weight: bold;
+}
+
+.trending article:hover{
+    color: #eb4034;
+    transition: all 0.5s;
+}
+
+.trending article img{
+    border-radius: 10px;
+    transition: all 0.5s;
+}
+.trending article:hover img{
+    -webkit-filter: sepia(50%) brightness(80%) contrast(120%);
+}

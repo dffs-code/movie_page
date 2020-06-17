@@ -1,0 +1,15 @@
+*{
+    color: whitesmoke;
+}
+
+.movie{
+    display: flex;
+    margin: 15px
+}
+.movie img{
+    border-radius: 10px;
+}
+
+.movie-info{
+    margin: 10px;
+}
