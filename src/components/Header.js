@@ -7,7 +7,7 @@ export default class Header extends Component{
     render(){
         return(
             <nav>
-                <Link to='/'>
+                <Link to='/movie_page'>
                     <img src={logo} className='logo-tmdb' alt='Logo TMDB'></img>
                 </Link>
         </nav>

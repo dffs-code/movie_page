@@ -8,7 +8,7 @@ import Movie from './pages/movie/index'
 const Routes = () => (
     <BrowserRouter>
         <Switch>
-            <Route exact path='/' component={Main} />
+            <Route exact path='/movie_page' component={Main} />
             <Route path='/movie/:id' component={Movie} />
         </Switch>
     </BrowserRouter>
