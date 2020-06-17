@@ -19,10 +19,16 @@ export default class Movie extends Component{
         const { movie } = this.state;
         let nota = movie.vote_average;
         if(movie.vote_average === 0 && movie.vote_count === 0) nota = 'Não Avaliado';
-        
+         
         let star = []
-        while(Math.round(nota/2)){
-            star.push(<span className="fa fa-star checked"></span>)
+        let note = Math.round(nota/2)
+        while(star.length<5){
+            if(note>0){
+                star.push(<span className="fa fa-star checked"></span>)
+                note--
+            }else{
+                star.push(<span className="fa fa-star"></span>)
+            }
         }
         return(
             <>
@@ -35,9 +41,7 @@ export default class Movie extends Component{
                     <p>Sinopse: {movie.overview}</p>
                     <p>Custos: US$ {Number(movie.budget).toLocaleString('en-US')}</p>
                     <p>Nota: {nota}</p>
-                    {star}
-                    <span className="fa fa-star"></span>
-                    <span className ="fa fa-star"></span>
+                    <p>{star}</p>
                 </div>
             </div>
             </>
