@@ -1,15 +1,14 @@
-*{
+* {
     margin: 0;
     padding: 0;
     font-family: Arial, Helvetica, sans-serif;
 }
 
-a{
+a {
     text-decoration: none;
 }
 
-
-.trending{
+.trending {
     justify-content: center;
     float: left;
     margin: 10px 10px;
@@ -17,7 +16,8 @@ a{
     flex-wrap: wrap;
     padding: 5px;
 }
-.trending article{
+
+.trending article {
     color: whitesmoke;
     text-align: center;
     background: transparent;
@@ -27,15 +27,16 @@ a{
     font-weight: bold;
 }
 
-.trending article:hover{
+.trending article:hover {
     color: #eb4034;
     transition: all 0.5s;
 }
 
-.trending article img{
+.trending article img {
     border-radius: 10px;
     transition: all 0.5s;
 }
-.trending article:hover img{
+
+.trending article:hover img {
     -webkit-filter: sepia(50%) brightness(80%) contrast(120%);
 }

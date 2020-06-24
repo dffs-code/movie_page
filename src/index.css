@@ -1,6 +1,7 @@
 body {
   margin: 0;
-  background-color: #0b0b0e;
+  background-color: #181818;
+  scroll-behavior: smooth;
 }
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',

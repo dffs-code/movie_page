@@ -1,20 +1,38 @@
-nav{
+nav {
+    background-color: #202020;
     height: 70px;
-    border-bottom: 1px solid rgba(255,255,255,.1);
+    opacity: 80%;
+    width: 100%;
 }
 
-.logo-tmdb{
+.logo-tmdb {
     margin-top: 15px;
     margin-left: 15px;
     width: 100px;
 }
-i{
+
+i {
     margin-top: 22px;
     margin-right: 20px;
     float: right;
     transition: 0.2s all;
 }
-i:hover{
+
+i:hover {
     font-weight: bold;
     color: #01b4e4;
+}
+
+.searchbar {
+    margin-top: 22px;
+    float: right;
+    margin-right: 15px;
+    border: 1px solid whitesmoke;
+    width: 130px;
+    -webkit-transition: width 0.4s ease-in-out;
+    transition: width 0.4s ease-in-out;
+}
+
+.searchbar:focus {
+    width: 200px;
 }

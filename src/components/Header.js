@@ -10,9 +10,6 @@ export default class Header extends Component{
                 <Link to='/movie_page'>
                     <img src={logo} className='logo-tmdb' alt='Logo TMDB'></img>
                 </Link>
-                <Link to='/search_page'>
-                    <i className='small material-icons'>search</i>
-                </Link>
         </nav>
         )
     }
