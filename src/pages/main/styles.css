@@ -8,6 +8,10 @@ a {
     text-decoration: none;
 }
 
+.logo-tmdb {
+    cursor: pointer;
+}
+
 .trending {
     justify-content: center;
     float: left;
@@ -39,4 +43,22 @@ a {
 
 .trending article:hover img {
     -webkit-filter: sepia(50%) brightness(80%) contrast(120%);
+}
+
+.searchbar {
+    font-size: 20px;
+    background: transparent;
+    margin-top: 22px;
+    float: right;
+    margin-right: 15px;
+    border: none;
+    width: 130px;
+    -webkit-transition: width 0.4s ease-in-out;
+    transition: all 0.4s ease-in-out;
+}
+
+.searchbar:focus {
+    outline: none;
+    border-bottom: 2px solid #0694BB;
+    width: 200px;
 }

@@ -22,17 +22,3 @@ i:hover {
     font-weight: bold;
     color: #01b4e4;
 }
-
-.searchbar {
-    margin-top: 22px;
-    float: right;
-    margin-right: 15px;
-    border: 1px solid whitesmoke;
-    width: 130px;
-    -webkit-transition: width 0.4s ease-in-out;
-    transition: width 0.4s ease-in-out;
-}
-
-.searchbar:focus {
-    width: 200px;
-}
