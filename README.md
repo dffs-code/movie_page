@@ -9,6 +9,8 @@ Além dessas features, foi possível implementar uma feature de pesquisa ainda n
 
 O projeto em funcionamento pode ser encontrado [aqui](https://dffs-code.github.io/movie_page)
 
+
+![](archive/demo.gif)
 In the project directory, you can run:
 
 ### `yarn start`
