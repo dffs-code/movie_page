@@ -9,6 +9,7 @@ export default class Movie extends Component{
     state = {
         movie: {},
         cast: [],
+        crew: [],
         loading: true,
     };
 
@@ -19,7 +20,7 @@ export default class Movie extends Component{
         this.setState({ movie: response.data, loading: false})
 
         const credits = await api.get(`/movie/${id}/credits?api_key=${API_KEY}`)
-        this.setState({cast: credits.data.cast.slice(0,5)})
+        this.setState({cast: credits.data.cast.slice(0,8), crew: credits.data.crew})
     }
 
     getGen = () => {
@@ -34,11 +35,25 @@ export default class Movie extends Component{
 
     getCast = () => {
         const { cast } = this.state;
-        var elen = []
-        cast.map(actor =>(
-            elen.push(actor.name)
+        return (cast.map(actor =>(
+            <div className='actor' key={actor.id}>
+                <figure>
+                <img src={`https://image.tmdb.org/t/p/w185${actor.profile_path}`} aria-hidden alt={`${actor.name} photo`}/>
+                <figcaption>{actor.name}</figcaption>
+                </figure>
+            </div>
+        )))
+    }
+
+    getCrew = () =>{
+        const { crew } = this.state;
+        const directors = crew.filter((el) =>{
+            return el.job === "Director"})
+        const dir = []
+        directors.map(job => (
+            dir.push(job.name)
         ))
-        return (elen.join(', '))
+        return dir.join(', ')
     }
     render(){
         const { movie } = this.state;
@@ -60,15 +75,17 @@ export default class Movie extends Component{
             <>
             <Header />
             <div className='movie'>
-                <img src={'https://image.tmdb.org/t/p/w342' + movie.poster_path} alt={movie.title + ' poster'}/>
+                <img src={'https://image.tmdb.org/t/p/w500' + movie.poster_path} alt={movie.title + ' poster'} className='poster'/>
                 <div className='movie-info'>
                     <h1 className='title'>{movie.title}</h1>
                     <h3 className='original-title'>'{movie.original_title}'</h3>
                     <p>Sinopse:</p>
                     <p>{movie.overview}</p>
                     Gêneros: {this.state.loading ? "Loading" : this.getGen()}.
-                    <p>Elenco: {this.state.loading ? "Loading" : this.getCast()}, entre outros.</p>
-                    <p>Orçamento: US$ {Number(movie.budget).toLocaleString('en-US')}</p>
+                    <p>Elenco:</p> 
+                    <div className='cast'>{this.state.loading ? "Loading" : this.getCast()}</div>
+                    <p>Direção: {this.state.loading ? "Loading" : this.getCrew()}</p>
+                    <p>Orçamento: {movie.budget === 0 ? "Não informado" : "US$" + Number(movie.budget).toLocaleString('en-US')}</p>
                     <p>Nota: {nota}</p>
                     <h1>{star}</h1>
                 </div>

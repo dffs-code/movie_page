@@ -9,10 +9,14 @@
     display: flex;
     margin: 40px
 }
-.movie img{
+.movie .poster{
+    max-height: 750px;
     border-radius: 10px;
 }
 
+.movie-info img{
+    border-radius: 10px;
+}
 .movie-info{
     margin: 50px;
     margin-left: 50px;
@@ -27,4 +31,15 @@
 
 .checked{
     color: orange;
+}
+.cast{
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.cast .actor{
+    border-radius: 10px;
+    margin: 10px;
 }
