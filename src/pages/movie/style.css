@@ -10,7 +10,7 @@
     margin: 40px
 }
 .movie .poster{
-    max-height: 750px;
+    max-height: 513px;
     border-radius: 10px;
 }
 
@@ -40,6 +40,7 @@
 }
 
 .cast .actor{
+    font-size: 0.6em;
     border-radius: 10px;
-    margin: 10px;
+    margin: 5px;
 }

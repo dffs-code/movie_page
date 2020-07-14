@@ -38,7 +38,7 @@ export default class Movie extends Component{
         return (cast.map(actor =>(
             <div className='actor' key={actor.id}>
                 <figure>
-                <img src={`https://image.tmdb.org/t/p/w185${actor.profile_path}`} aria-hidden alt={`${actor.name} photo`}/>
+                <img src={`https://image.tmdb.org/t/p/w45${actor.profile_path}`} aria-hidden alt={`${actor.name} photo`}/>
                 <figcaption>{actor.name}</figcaption>
                 </figure>
             </div>
@@ -55,6 +55,11 @@ export default class Movie extends Component{
         ))
         return dir.join(', ')
     }
+
+    getYear = () =>{
+        const { movie } = this.state;
+        return movie.release_date.substring(0,4)
+    }
     render(){
         const { movie } = this.state;
         let nota = movie.vote_average;
@@ -70,20 +75,20 @@ export default class Movie extends Component{
                 star.push(<span className="fa fa-star" key={star}></span>)
             }
         }
-        
         return(
             <>
             <Header />
             <div className='movie'>
-                <img src={'https://image.tmdb.org/t/p/w500' + movie.poster_path} alt={movie.title + ' poster'} className='poster'/>
+                <img src={'https://image.tmdb.org/t/p/w342' + movie.poster_path} alt={movie.title + ' poster'} className='poster'/>
                 <div className='movie-info'>
                     <h1 className='title'>{movie.title}</h1>
                     <h3 className='original-title'>'{movie.original_title}'</h3>
+                    <h4>{this.state.loading ? "Loading" : this.getYear()}</h4>
                     <p>Sinopse:</p>
                     <p>{movie.overview}</p>
                     Gêneros: {this.state.loading ? "Loading" : this.getGen()}.
                     <p>Elenco:</p> 
-                    <div className='cast'>{this.state.loading ? "Loading" : this.getCast()}</div>
+                    <div className='cast'>{this.state.loading ? "Loading" : this.getCast()}</div> 
                     <p>Direção: {this.state.loading ? "Loading" : this.getCrew()}</p>
                     <p>Orçamento: {movie.budget === 0 ? "Não informado" : "US$" + Number(movie.budget).toLocaleString('en-US')}</p>
                     <p>Nota: {nota}</p>
